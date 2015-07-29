@@ -30,7 +30,7 @@ class Guvera::Dynamodb::BatchWriter
   def save
     threads = []
     @changes.each_slice(25) do |items|
-      threads << Guvera::Core.dispatch(method: "batch save", items: items) do
+      threads << Thread.new do
         @client.batch_write_item({
           request_items: {
             "#{@table_name}" => items
