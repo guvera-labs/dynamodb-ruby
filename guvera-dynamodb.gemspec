@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Guvera::Dynamodb::VERSION
   spec.authors       = ["Ray Hilton"]
   spec.email         = ["ray.hilton@guvera.com"]
-  spec.summary       = %q{TODO: A DynamoDB model mapping tool for ruby.}
-  spec.description   = %q{TODO: The motivation of this project was to create something like Dynamoid except using AWS SDK v2 and allowing access to modern DynamoDB features.}
+  spec.summary       = %q{A DynamoDB model mapping tool for ruby.}
+  spec.description   = %q{The motivation of this project was to create something like Dynamoid except using AWS SDK v2 and allowing access to modern DynamoDB features.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
