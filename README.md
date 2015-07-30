@@ -1,3 +1,5 @@
+https://api.travis-ci.org/guvera-labs/dynamodb-ruby.svg
+
 # Guvera::Dynamodb
 
 Map dynamodb tables to ruby classes in a manner not entirely unlike ActiveRecord or Dynamoid
