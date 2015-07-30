@@ -36,6 +36,8 @@ RSpec.configure do |c|
 
     Aws.config.update(
       region: 'us-east-1',
+      access_key_id: 'no-key',
+      secret_access_key: 'secret',
       dynamodb: {
         endpoint: 'http://localhost:30180',
         # api_verison: '2012-08-10',
