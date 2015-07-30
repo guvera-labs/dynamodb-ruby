@@ -158,10 +158,7 @@ class Guvera::Dynamodb::Model
         }
       )
 
-      puts response
-
-      resp.responses[self.table_name].map do |item|
-        puts item
+      response.responses[self.table_name].map do |item|
         obj = self.new
         obj.from_dynamodb_model_hash item
         obj
