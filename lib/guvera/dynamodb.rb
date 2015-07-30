@@ -1,11 +1,16 @@
 require "guvera/dynamodb/version"
 require 'aws-sdk'
+require 'logger'
 
 module Guvera
-  module Dynamodb
-    # Your code goes here...
+  class Dynamodb
+    class << self
+      attr_accessor :logger
+    end
   end
 end
+
+Guvera::Dynamodb.logger = Logger.new(STDOUT)
 
 require "guvera/dynamodb/model"
 require "guvera/dynamodb/request"

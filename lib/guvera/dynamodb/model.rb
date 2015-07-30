@@ -1,3 +1,6 @@
+require 'active_support'
+require 'active_support/core_ext'
+
 class Guvera::Dynamodb::Model
   attr_accessor :is_new
 
@@ -86,15 +89,15 @@ class Guvera::Dynamodb::Model
     end
 
     def create_table
-      LOGGER.info "Creating table #{table_name}"
+      Guvera::Dynamodb.logger.info "Creating table #{table_name}"
       self.dynamodb.create_table(self.table_schema.call.merge(table_name: self.table_name))
 
       while !table_exists? do
-        LOGGER.debug "Waiting for table #{table_name} to be created"
+        Guvera::Dynamodb.logger.debug "Waiting for table #{table_name} to be created"
         sleep 1
       end
     rescue Aws::DynamoDB::Errors::ResourceInUseException => e
-      LOGGER.info "#{table_name} table already exists"
+      Guvera::Dynamodb.logger.info "#{table_name} table already exists"
     end
 
     def query conditions, options={}

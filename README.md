@@ -42,7 +42,7 @@ class Document < Guvera::Dynamodb::Model
 
   before_create :generate_id # can be (before|after)_(create|destroy|save)
 
-  table_scheme do
+  table_schema do
     {
       attribute_definitions: [
         { attribute_name: "doc_id", attribute_type: "S" },

@@ -1,5 +1,5 @@
 module Guvera
-  module Dynamodb
+  class Dynamodb
     VERSION = "0.0.1"
   end
 end
