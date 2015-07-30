@@ -1,4 +1,4 @@
-https://api.travis-ci.org/guvera-labs/dynamodb-ruby.svg
+[![Build Status](https://travis-ci.org/guvera-labs/dynamodb-ruby.svg)](https://travis-ci.org/guvera-labs/dynamodb-ruby)
 
 # Guvera::Dynamodb
 
