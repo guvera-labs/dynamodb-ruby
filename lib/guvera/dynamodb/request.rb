@@ -10,7 +10,7 @@ class Guvera::Dynamodb::Request
   def response
     params = self.params.merge(@query)
     response = @model_class.dynamodb.send(@method, params)
-    Response.new @model_class, response
+    Guvera::Dynamodb::Response.new @model_class, response
   end
 
   def method_missing method, *args, &block

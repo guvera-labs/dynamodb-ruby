@@ -104,7 +104,7 @@ class Guvera::Dynamodb::Model
 
       options = { scan_index_forward:options } unless options.is_a? Hash
 
-      request = Request.new self
+      request = Guvera::Dynamodb::Request.new self
       request.method = :query
       request.params = {
         table_name: self.table_name,
@@ -128,7 +128,7 @@ class Guvera::Dynamodb::Model
     end
 
     def scan options={limit: 50}
-      request = Request.new self
+      request = Guvera::Dynamodb::Request.new self
       request.method = :scan
       request.params = {
         table_name: self.table_name,
@@ -170,7 +170,7 @@ class Guvera::Dynamodb::Model
     end
 
     def batch_writer
-      BatchWriter.new dynamodb, table_name
+      Guvera::Dynamodb::BatchWriter.new dynamodb, table_name
     end
 
   end

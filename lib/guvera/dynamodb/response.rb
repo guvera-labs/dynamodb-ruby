@@ -7,7 +7,7 @@ class Guvera::Dynamodb::Response
   end
 
   def cursor
-    Cursor.new @model_class, @response
+    Guvera::Dynamodb::Cursor.new @model_class, @response
   end
 
   def object_from_item item
