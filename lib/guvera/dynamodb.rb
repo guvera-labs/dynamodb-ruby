@@ -12,8 +12,8 @@ end
 
 Guvera::Dynamodb.logger = Logger.new(STDOUT)
 
-require "guvera/dynamodb/model"
 require "guvera/dynamodb/request"
 require "guvera/dynamodb/response"
 require "guvera/dynamodb/cursor"
 require "guvera/dynamodb/batch_writer"
+require "guvera/dynamodb/model"
